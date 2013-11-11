@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var todoTemplate = $.trim($('#todo_template').html());
- 
+
   function bindEvents() {
     // add enter function!
     // $('textarea').bind("enterKey",function(e){
@@ -25,29 +25,29 @@ $(document).ready(function() {
       completeTodo(e)
     })
   }
- 
+
   function addTodo() {
     var input = $('input.todo').val()
     buildTodo(input).appendTo('div.todo_list')
   }
- 
+
   function deleteTodo(evt) {
     $(evt.target).closest('div').remove()
   }
- 
+
   function completeTodo(evt) {
     console.log(evt.target)
     $(evt.target).closest('li').text('Completed! :)')
-        // $(evt.target).parent().parent().children().first()find('a.delete').text('woo')
-
+    // ('a.complete').closest('ul').children().first().remove()
+    // $(evt.target).parent().parent().children().first()find('a.delete').text('woo')
 
   }
-  
+
   function buildTodo(todoName) {
     var $todo = $(todoTemplate);
     $todo.find('h2').text(todoName)
     return $todo;
   }
- 
+
   bindEvents();
 });
