@@ -1,0 +1,26 @@
+#todo {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.toolbox {
+  text-align: center;
+}
+
+.todo.complete h2 {
+  text-decoration: line-through;
+}
+
+input {
+
+height: 40px;
+width: 200px;
+margin-bottom: 10px;
+/*padding-left: 5px;*/
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+}
