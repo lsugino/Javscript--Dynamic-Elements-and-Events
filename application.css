@@ -1,26 +1,86 @@
 #todo {
   width: 200px;
+  height: 150px;
+  position: center;
   margin-left: auto;
   margin-right: auto;
 }
 
+input {
+  /*line-height: 50px;*/
+}
+
 .toolbox {
-  text-align: center;
+  /*text-align: center;*/
+  color: white;
 }
 
 .todo.complete h2 {
   text-decoration: line-through;
 }
 
-input {
-
-height: 40px;
-width: 200px;
-margin-bottom: 10px;
-/*padding-left: 5px;*/
+body {
+  background: black;
+  color: pink;
+  font-family: "Trebuchet MS";
+  display: inline-block
 }
 
 h1 {
-	text-align: center;
-	font-weight: bold;
+  color; white;
+  font-size: 42px;
+  font-weight: bold;
+  margin-left: 40px;
+  /*text-align: center;*/
 }
+/**/
+h2 {
+  position: center;
+}
+
+ul {
+  /*position: relative;*/
+  list-style-type: square;
+  /*background-color: white;*/
+}
+
+div.todo {
+  /*background-color: white;*/
+}
+
+li {
+  position: relative;
+  margin: 5px;
+  text-decoration: none;
+  /*background-color: white;*/
+}
+
+a { color: inherit; }
+
+a:hover {text-decoration:underline; opacity: 0.7; }
+
+button {
+  margin-top: 10px;
+  line-height: 23px;
+  -webkit-border-radius: 15px;
+  background-color: #E1E1E1;
+  margin-left: 30px;
+}
+
+button.add {
+  font-size: 16px;
+  font-weight: bold;
+  /*order: 5px solid #009900;*/
+  padding: 5px;
+
+}
+
+input {
+  /*position: relative;*/
+  font-size: 20px;
+  height: 65px;
+  width: 400px;
+  margin-bottom: 15px;
+  padding-left: 6px;
+}
+

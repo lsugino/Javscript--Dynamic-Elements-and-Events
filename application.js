@@ -1,17 +1,15 @@
+ENTER_KEY_CODE = 13
+
 $(document).ready(function() {
   var todoTemplate = $.trim($('#todo_template').html());
 
-  function bindEvents() {
-    // add enter function!
-    // $('textarea').bind("enterKey",function(e){
-    //   addTodo()
-    // });
-    // $('.add').keyup(function(e){
-    //   if(e.keyCode == 13)
-    //   {
-    //       $(this).trigger("enterKey");
-    //   }
-    // });
+  function bindEvents(e) {
+
+    $('#todoid').on('keypress', function(e) {
+      if (e.keyCode === ENTER_KEY_CODE) {
+        return addTodo(), $(this).val('')     //addTodo()
+      }
+    })
 
     $('.add').on('click', function() {
       addTodo()
@@ -32,14 +30,15 @@ $(document).ready(function() {
   }
 
   function deleteTodo(evt) {
+    console.log(evt.target)
     $(evt.target).closest('div').remove()
   }
 
   function completeTodo(evt) {
     console.log(evt.target)
     $(evt.target).closest('li').text('Completed! :)')
-    // ('a.complete').closest('ul').children().first().remove()
-    // $(evt.target).parent().parent().children().first()find('a.delete').text('woo')
+
+    // $('a.complete').closest().parent().parent().children().first().remove()
 
   }
 
