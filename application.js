@@ -29,17 +29,16 @@ $(document).ready(function() {
     buildTodo(input).appendTo('div.todo_list')
   }
 
-  function deleteTodo(evt) {
+  function deleteTodo(e) {
     console.log(evt.target)
-    $(evt.target).closest('div').remove()
+    $(e.target).closest('div').remove()
   }
 
-  function completeTodo(evt) {
+  function completeTodo(e) {
     console.log(evt.target)
-    $(evt.target).closest('li').text('Completed! :)')
-
-    // $('a.complete').closest().parent().parent().children().first().remove()
-
+    // If I wanted to delete it...
+    // $(e.target).closest('li').prev().first().remove()
+    $(e.target).closest('li').text('Completed! :)')
   }
 
   function buildTodo(todoName) {
